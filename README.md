@@ -36,6 +36,18 @@ $ docker run --rm whiteadam/nmap -Pn -p 80,443 www.whiteadam.com
 $ docker run --rm whiteadam/nmap --script ssl-enum-ciphers -p 443 www.amazon.com
 ```
 
+### ISUP Script
+
+Are you tired of launching servers and waiting for ssh to become available?
+If so, *GOOD NEWS!* I made a script called `isup` that will tell you when your server is ready to log into (or at least when the port is open.
+
+Give it a try:
+```console
+$ docker run --rm nmap isup whiteadam.com 80
+Waiting for 80 on whiteadam.com to become available...
+Your server is up!
+```
+
 ## Tags
 
 * `whiteadam/nmap:latest` based on `alpine:3.4`
